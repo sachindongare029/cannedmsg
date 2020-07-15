@@ -19481,9 +19481,18 @@ App.views.CannedMsgView = Backbone.View.extend({
       var template = Handlebars.compile(templateHtml);
       var finalHtml = template();
       self.$el.html(finalHtml);
-      new App.views.FilterView();
+      self.renderFilterView();
+      self.renderResultView();
     });
     return self;
+  },
+
+  renderFilterView: function() {
+    new App.views.FilterView();
+  },
+
+  renderResultView: function() {
+    new App.views.ResultView();
   }
 });
 ;var App = App || {};
@@ -19501,6 +19510,28 @@ App.views.FilterView = Backbone.View.extend({
   render: function() {
     var self = this;
     $.get("/src/templates/filterView.hbs", function(templateHtml) {
+      var template = Handlebars.compile(templateHtml);
+      var finalHtml = template();
+      self.$el.html(finalHtml);
+    });
+    return self;
+  }
+});
+;var App = App || {};
+
+App.views.ResultView = Backbone.View.extend({
+  el: "#result__view",
+
+  events: {},
+
+  initialize: function() {
+    _.bindAll(this, "render");
+    this.render();
+  },
+
+  render: function() {
+    var self = this;
+    $.get("/src/templates/resultView.hbs", function(templateHtml) {
       var template = Handlebars.compile(templateHtml);
       var finalHtml = template();
       self.$el.html(finalHtml);

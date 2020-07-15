@@ -17,11 +17,16 @@ App.views.CannedMsgView = Backbone.View.extend({
       var finalHtml = template();
       self.$el.html(finalHtml);
       self.renderFilterView();
+      self.renderResultView();
     });
     return self;
   },
 
   renderFilterView: function() {
     new App.views.FilterView();
+  },
+
+  renderResultView: function() {
+    new App.views.ResultView();
   }
 });
