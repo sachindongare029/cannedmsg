@@ -40,6 +40,7 @@ body {
       }
       .new__msg--btn {
         width: 20%;
+        outline: none;
       }
     }
   }
@@ -55,6 +56,54 @@ body {
     }
     label {
       margin: 0 0 0 3px;
+    }
+  }
+}
+
+// Result View
+
+.canned__result__section {
+  table {
+    tr {
+      height: 40px;
+      border: 1px solid #e0e0e0;
+    }
+    thead {
+      tr {
+        background-color: #636363;
+        color: #fff;
+        height: 40px;
+        text-align: left;
+        th:first-child {
+          padding-left: 25px;
+        }
+        th:last-child {
+          padding-right: 25px;
+          text-align: center;
+        }
+      }
+    }
+    tbody {
+      tr {
+        text-align: left;
+        td:first-child {
+          padding-left: 25px;
+        }
+        td:last-child {
+          padding-right: 25px;
+          text-align: center;
+        }
+        .view--btn {
+          margin-right: 15px;
+          padding: 4px 22px;
+        }
+        .edit--btn {
+          padding: 4px 22px;
+        }
+      }
+      tr:nth-child(odd) {
+        background-color: #fff;
+      }
     }
   }
 }
