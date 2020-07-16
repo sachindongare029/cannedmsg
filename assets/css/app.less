@@ -27,6 +27,7 @@ body {
           input {
             margin-bottom: 0;
             width: 183px;
+            outline: none;
           }
           label {
             margin-bottom: 0;
@@ -53,6 +54,7 @@ body {
       width: 70px;
       height: 25px;
       padding: 0px 7px;
+      outline: none;
     }
     label {
       margin: 0 0 0 3px;
@@ -96,13 +98,45 @@ body {
         .view--btn {
           margin-right: 15px;
           padding: 4px 22px;
+          outline: none;
         }
         .edit--btn {
           padding: 4px 22px;
+          outline: none;
         }
       }
       tr:nth-child(odd) {
         background-color: #fff;
+      }
+    }
+  }
+}
+.modal {
+  width: 520px;
+  margin-left: -229px;
+  height: 88vh;
+  overflow: auto;
+  .modal-header {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 15px;
+  }
+  .modal-body {
+    padding: 20px 30px 0;
+    .form__item {
+      margin-bottom: 15px;
+      input[type="text"], select {
+        width: 100%;
+        box-sizing: border-box;
+        height: 33px;
+        outline: none;
+        margin-bottom: 0;
+      }
+    }
+    .notify__by__mail {
+      display: flex;
+      label {
+        margin-left: 5px;
       }
     }
   }

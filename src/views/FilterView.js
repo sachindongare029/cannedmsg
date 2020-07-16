@@ -3,7 +3,9 @@ var App = App || {};
 App.views.FilterView = Backbone.View.extend({
   el: "#filter__view",
 
-  events: {},
+  events: {
+    "click #create_new": "newCannedMsg"
+  },
 
   initialize: function() {
     _.bindAll(this, "render");
@@ -18,5 +20,8 @@ App.views.FilterView = Backbone.View.extend({
       self.$el.html(finalHtml);
     });
     return self;
+  },
+  newCannedMsg: function() {
+    new App.views.NewCannedMsgModal().show();
   }
 });
