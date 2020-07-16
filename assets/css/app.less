@@ -9,10 +9,52 @@ body {
     font-weight: 100;
     margin: 25px 0;
   }
-  .filters__grouped {
+  .filter__container {
     border: 1px solid #d6d6d6;
-    padding: 7px 20px;
+    padding: 15px 20px;
     background-color: #f3f3f3;
     border-radius: 5px;
+    .canned__filters__group {
+      display: flex;
+      justify-content: space-between;
+      .filters__grouped {
+        display: flex;
+        max-width: 60%;
+        .canned__filter {
+          display: flex;
+          align-items: center;
+          select,
+          input {
+            margin-bottom: 0;
+            width: 183px;
+          }
+          label {
+            margin-bottom: 0;
+            margin-right: 15px;
+            font-weight: 600;
+          }
+        }
+        .date__filter {
+          margin-left: 50px;
+        }
+      }
+      .new__msg--btn {
+        width: 20%;
+      }
+    }
+  }
+  .records__per__page {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin: 25px 0 15px;
+    select {
+      width: 70px;
+      height: 25px;
+      padding: 0px 7px;
+    }
+    label {
+      margin: 0 0 0 3px;
+    }
   }
 }

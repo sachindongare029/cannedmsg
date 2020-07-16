@@ -1,16 +1,30 @@
 <div class="canned__filter__section">
   <h4 class="canned__title">Canned Responses</h4>
-  <div class="filters__grouped">
-    <div class="type__filter">
-      <label>Filter by Type:</label>
-      <select>
-        <option>Active</option>
-        <option>Inactive</option>
-      </select>
+  <div class="filter__container">
+    <div class="canned__filters__group">
+      <div class="filters__grouped">
+        <div class="canned__filter type__filter">
+          <label>Filter by Type:</label>
+          <select class="btn">
+            <option>View All</option>
+            <option>Active</option>
+            <option>Inactive</option>
+          </select>
+        </div>
+        <div class="canned__filter date__filter">
+          <label>Filter by Date:</label>
+          <input placeholder="Select date range" type="date" />
+        </div>
+      </div>
+      <button class="btn new__msg--btn">Create New Response</button>
     </div>
-    <div class="date__filter">
-      <label>Filter by Date:</label>
-      <input type="date" />
-    </div>
+  </div>
+  <div class="records__per__page">
+    <select class="btn">
+      <option>10</option>
+      <option>15</option>
+      <option>20</option>
+    </select>
+    <label>records per page</label>
   </div>
 </div>
